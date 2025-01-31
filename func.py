@@ -73,6 +73,13 @@ def filter_transconv_valid(input_arr, layer_activations, kernel):
 # same_vec = np.frompyfunc(same_conv, 2, 1)
 # valid_vec = np.frompyfunc(valid_conv, 2, 1)
 
+
+def softmax_back(deri): # current placeholder
+    pass
+
+
+# ============================================== END USER FUNCTIONS DEFINED BELOW =============================================
+
 def softmax(inp):
     bat, rows, cols = inp.shape
 
@@ -81,8 +88,6 @@ def softmax(inp):
             exp_arr = np.exp(inp[bat, row, :])
             inp[bat, row, :] = exp_arr/np.sum(exp_arr)
 
-def softmax_back(deri): # current placeholder
-    pass
 
 
 def cross_entropy_loss(logits, labels):
