@@ -24,9 +24,9 @@ The required libaries can be installed using the requirements file
 
 Currenlty the Prerequisites include:
 
--Numpy
--scipy
--ipython
+- Numpy
+- scipy
+- ipython
 
 
 ```bash
@@ -37,11 +37,11 @@ pip install -r requirements.txt
 
 Currenlty the implemented layers and loss functions include:
 
--Conv2d
--Linear
--Self Attention
--Sigmoid
--Cross entropy loss using logits
+- Conv2d
+- Linear
+- Self Attention
+- Sigmoid
+- Cross entropy loss using logits
 
 There is a bug with softmax backwards function  (which is also used in self attention) that is being worked on locally.
 
