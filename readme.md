@@ -1,4 +1,4 @@
-# DL Framework Hardcoded
+# DL Framework from Scratch
 
 This project was made to completement theory that I learned while following Andrew Ng's [DeepLearning.ai course](https://www.deeplearning.ai/)
 
