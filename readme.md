@@ -15,8 +15,10 @@ The project contains the following files:
 - `layers.py`: Contains all necessary layers, and activation functions to build a model
 - `model.py`: Has the base model class definition, to be used for defining custom models, training and prediction...
 - `requirements.txt`: Dependencies to be installed for running the scripts
-- `sandbox.ipynb`: A testing environment used during development, does not hold significance for building custom models
+<!-- - `sandbox.ipynb`: A testing environment used during development, does not hold significance for building custom models -->
 - `templates.ipynb`: Contains templates associated with the expected structure of layers and loss fucntions etc...
+- `test_*.ipynb`: Test files containing the simple models implemented on the MNIST dataset. Includes Lin, Lin+CNN, Lin+CNN+Attention architectures
+- `MNIST_CSV`: Placeholder folder which needs to contain the (CSV) format of the MNIST dataset, from [here](https://git-disl.github.io/GTDLBench/datasets/mnist_datasets/), to be downloaded by the user themselves
 
 ## Prerequisites
 
@@ -24,9 +26,7 @@ The required libaries can be installed using the requirements file
 
 Currenlty the Prerequisites include:
 
-- Numpy
-- scipy
-- ipython
+-Numpy
 
 
 ```bash
@@ -37,13 +37,15 @@ pip install -r requirements.txt
 
 Currenlty the implemented layers and loss functions include:
 
-- Conv2d
-- Linear
-- Self Attention
-- Sigmoid
-- Cross entropy loss using logits
+-Conv2d
+-Linear
+-LazyLinear
+-Self Attention
+-Sigmoid
+-ReLU
+-Softmax
+-Cross entropy loss using logits
 
-There is a bug with softmax backwards function  (which is also used in self attention) that is being worked on locally.
 
 ## Usage
 
@@ -58,6 +60,9 @@ from model import Model
 import func
 import layers
 ```
+
+
+Please look into any of the test_*.ipynb files for an example, but briefly:
 
 To define a new model, a list containing the layer information needs to be passed while initializing the model.  
 Later, information about learning rate, loss function and optimizer should be passed into the model using .compile method.  
